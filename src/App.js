@@ -1,15 +1,15 @@
 import './App.css';
 import 'antd/dist/antd.css';
-import { styles } from './style';
-import { Input } from 'antd';
-import {View, Text} from './core-ui'
+import { Provider } from 'react-redux'
+import store from './store'
+
+import { ListMovie } from './Screen'
 
 function App() {
   return (
-    <View style={styles.container}>
-      <Text>Search Movie</Text>
-      <Input />
-    </View>
+    <Provider store={store}>
+      <ListMovie />
+    </Provider>
   );
 }
 
